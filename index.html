@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zuri Palomas Pet Shop — Tampa, FL</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Segoe UI', Arial, sans-serif; background:#FFF9EC; color:#3a2e1a; line-height:1.55; }
+  .wrap { max-width:640px; margin:0 auto; }
+  /* Header */
+  header.top { background:#fff; padding:12px 16px; display:flex; align-items:center; justify-content:space-between; border-bottom:4px solid #FFC93C; position:sticky; top:0; z-index:10; }
+  .logo { font-weight:900; font-size:1.25rem; letter-spacing:.5px; }
+  .logo .z { color:#35b24a; } .logo .p { color:#f06292; }
+  .logo small { display:block; font-size:.72rem; color:#8a7a5c; letter-spacing:3px; font-weight:700; }
+  .lang { display:flex; gap:6px; }
+  .lang button { border:2px solid #FFC93C; background:#fff; color:#3a2e1a; font-weight:800; border-radius:99px; padding:6px 14px; font-size:.85rem; cursor:pointer; }
+  .lang button.on { background:#FFC93C; }
+  /* Hero */
+  .hero { text-align:center; padding:44px 20px 36px; background:linear-gradient(135deg,#FFD93D 0%,#FF9F1C 55%,#FF6B9D 100%); color:#3a2200; border-radius:0 0 36px 36px; }
+  .hero .emoji { font-size:3rem; }
+  .hero h1 { font-size:2rem; line-height:1.15; margin:10px 0 6px; }
+  .hero h1 .grn { color:#1d7a2f; } .hero h1 .pnk { color:#c2185b; }
+  .hero p { font-size:1.02rem; font-weight:600; color:#5a3c00; margin-bottom:18px; }
+  .cta-row { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; }
+  .btn { display:inline-block; padding:13px 26px; border-radius:99px; text-decoration:none; font-weight:800; font-size:1rem; }
+  .btn.call { background:#35b24a; color:#fff; box-shadow:0 4px 0 #248a36; }
+  .btn.wa { background:#fff; color:#1d7a2f; box-shadow:0 4px 0 rgba(0,0,0,.12); }
+  .btn:active { transform:translateY(2px); box-shadow:none; }
+  /* Sections */
+  section { padding:30px 20px; }
+  section h2 { text-align:center; font-size:1.5rem; margin-bottom:4px; }
+  section .lede { text-align:center; color:#8a7a5c; margin-bottom:18px; font-size:.95rem; }
+  .cats { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cat { border-radius:20px; padding:18px 14px; text-align:center; color:#fff; }
+  .cat .e { font-size:2.2rem; }
+  .cat h3 { font-size:1rem; margin:6px 0 4px; }
+  .cat p { font-size:.8rem; opacity:.92; }
+  .c1 { background:linear-gradient(135deg,#35b24a,#1d7a2f); }
+  .c2 { background:linear-gradient(135deg,#FF9F1C,#e07b00); }
+  .c3 { background:linear-gradient(135deg,#4FB6FF,#2b7fd4); }
+  .c4 { background:linear-gradient(135deg,#f06292,#c2185b); }
+  /* Gallery */
+  .gal { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .gal img { width:100%; height:220px; object-fit:cover; border-radius:18px; border:4px solid #fff; box-shadow:0 4px 12px rgba(0,0,0,.12); }
+  /* Reviews */
+  .revbox { background:#fff; border-radius:22px; padding:24px 20px; text-align:center; border:3px dashed #FFC93C; }
+  .revbox .stars { font-size:1.6rem; color:#FF9F1C; letter-spacing:2px; }
+  .revbox .score { font-size:2.4rem; font-weight:900; color:#3a2e1a; }
+  .revbox p { color:#8a7a5c; font-size:.9rem; margin-bottom:14px; }
+  .qrrow { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-top:16px; }
+  .qr { background:#fff; border-radius:16px; padding:12px; text-align:center; box-shadow:0 4px 12px rgba(0,0,0,.08); }
+  .qr img { width:120px; height:120px; display:block; }
+  .qr span { font-size:.78rem; font-weight:700; color:#5a4a2a; display:block; margin-top:6px; }
+  /* Visit */
+  .visit { background:linear-gradient(135deg,#e8f9ee,#d3f0ff); border-radius:26px; padding:24px 20px; }
+  .visit h2 { color:#1d7a2f; }
+  .info { display:grid; gap:10px; margin:14px 0; }
+  .info div { background:#fff; border-radius:14px; padding:12px 14px; font-size:.92rem; }
+  .info b { color:#1d7a2f; }
+  .mapbtns { display:flex; gap:10px; flex-wrap:wrap; justify-content:center; }
+  .btn.map { background:#2b7fd4; color:#fff; box-shadow:0 4px 0 #1c5c9e; }
+  /* Contact */
+  .contact { text-align:center; }
+  .contact .phone { font-size:1.7rem; font-weight:900; margin:8px 0; }
+  .contact .phone a { color:#1d7a2f; text-decoration:none; }
+  .ig { display:inline-block; margin-top:10px; background:linear-gradient(45deg,#f09433,#dc2743,#bc1888); color:#fff; padding:12px 26px; border-radius:99px; text-decoration:none; font-weight:800; }
+  footer { text-align:center; padding:24px 16px 34px; font-size:.78rem; color:#a08c66; }
+  footer a { color:#1d7a2f; text-decoration:none; font-weight:700; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <div class="logo"><span class="z">ZURI</span> <span class="p">PALOMAS</span><small>PET SHOP</small></div>
+  <div class="lang">
+    <button id="btn-es" class="on" onclick="setLang('es')">ES</button>
+    <button id="btn-en" onclick="setLang('en')">EN</button>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="emoji">🦜🦜</div>
+  <h1><span class="grn" data-es="Tus aves y mascotas" data-en="Your birds & pets">Tus aves y mascotas</span><br><span class="pnk" data-es="felices y sanas" data-en="happy & healthy">felices y sanas</span></h1>
+  <p data-es="Aves, alimentos y todo para tu mascota en Tampa" data-en="Birds, food & everything for your pet in Tampa">Aves, alimentos y todo para tu mascota en Tampa</p>
+  <div class="cta-row">
+    <a class="btn call" href="tel:+13152899175" data-es="📞 Llamar" data-en="📞 Call">📞 Llamar</a>
+    <a class="btn wa" href="https://wa.me/13152899175?text=Hola%20Zuri%20Palomas%20Pet%20Shop" data-es="💬 WhatsApp" data-en="💬 WhatsApp">💬 WhatsApp</a>
+  </div>
+</div>
+
+<section>
+  <h2 data-es="🐾 Lo que encuentras aquí" data-en="🐾 What you'll find here">🐾 Lo que encuentras aquí</h2>
+  <p class="lede" data-es="Todo para tus aves y mascotas" data-en="Everything for your birds & pets">Todo para tus aves y mascotas</p>
+  <div class="cats">
+    <div class="cat c1"><div class="e">🦜</div><h3 data-es="Aves" data-en="Birds">Aves</h3><p data-es="Loros, cacatúas, periquitos y más" data-en="Parrots, cockatiels, budgies & more">Loros, cacatúas, periquitos y más</p></div>
+    <div class="cat c2"><div class="e">🌾</div><h3 data-es="Alimentos" data-en="Food">Alimentos</h3><p data-es="Semillas y comida de calidad" data-en="Quality seeds & food">Semillas y comida de calidad</p></div>
+    <div class="cat c3"><div class="e">🏠</div><h3 data-es="Jaulas y hábitat" data-en="Cages & habitat">Jaulas y hábitat</h3><p data-es="Jaulas, perchas y accesorios" data-en="Cages, perches & accessories">Jaulas, perchas y accesorios</p></div>
+    <div class="cat c4"><div class="e">🧸</div><h3 data-es="Juguetes" data-en="Toys">Juguetes</h3><p data-es="Diversión para tus mascotas" data-en="Fun for your pets">Diversión para tus mascotas</p></div>
+  </div>
+</section>
+
+<section>
+  <h2 data-es="📸 Nuestra tienda" data-en="📸 Our store">📸 Nuestra tienda</h2>
+  <p class="lede" data-es="Fotos reales de Zuri Palomas Pet Shop" data-en="Real photos of Zuri Palomas Pet Shop">Fotos reales de Zuri Palomas Pet Shop</p>
+  <div class="gal">
+    <img src="imgs/fachada.jpg" alt="Fachada de Zuri Palomas Pet Shop">
+    <img src="imgs/aves1.jpg" alt="Aves en la tienda">
+    <img src="imgs/puerta.jpg" alt="Entrada de la tienda">
+    <img src="imgs/aves2.jpg" alt="Aves disponibles">
+  </div>
+</section>
+
+<section>
+  <div class="revbox">
+    <h2 data-es="⭐ Lo que dicen los clientes" data-en="⭐ What customers say">⭐ Lo que dicen los clientes</h2>
+    <div class="stars">★★★★★</div>
+    <div class="score">4.8</div>
+    <p data-es="Basado en 24 reseñas de Google" data-en="Based on 24 Google reviews">Basado en 24 reseñas de Google</p>
+    <div class="qrrow">
+      <div class="qr"><img src="qr/qr-review.png" alt="QR reseña"><span data-es="Déjanos tu reseña" data-en="Leave a review">Déjanos tu reseña</span></div>
+      <div class="qr"><img src="qr/qr-whatsapp.png" alt="QR WhatsApp"><span>WhatsApp</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="visit">
+    <h2 data-es="📍 Visítanos" data-en="📍 Visit us">📍 Visítanos</h2>
+    <div class="info">
+      <div><b data-es="Dirección:" data-en="Address:">Dirección:</b> <span data-es="3434 W Columbus Dr Ste 109, Tampa, FL 33607" data-en="3434 W Columbus Dr Ste 109, Tampa, FL 33607">3434 W Columbus Dr Ste 109, Tampa, FL 33607</span></div>
+      <div><b data-es="Horario:" data-en="Hours:">Horario:</b> <span data-es="Lun–Sáb 10:00 AM – 6:00 PM · Dom 10:00 AM – 4:00 PM" data-en="Mon–Sat 10:00 AM – 6:00 PM · Sun 10:00 AM – 4:00 PM">Lun–Sáb 10:00 AM – 6:00 PM · Dom 10:00 AM – 4:00 PM</span></div>
+      <div><b data-es="Teléfono:" data-en="Phone:">Teléfono:</b> <a href="tel:+13152899175" style="color:#1d7a2f;font-weight:700;">(315) 289-9175</a></div>
+    </div>
+    <div class="mapbtns">
+      <a class="btn map" href="https://www.google.com/maps/search/?api=1&query=Zuri+Palomas+Pet+Shop+3434+W+Columbus+Dr+Tampa+FL+33607" data-es="🗺️ Cómo llegar" data-en="🗺️ Get directions">🗺️ Cómo llegar</a>
+    </div>
+    <div class="qrrow">
+      <div class="qr"><img src="qr/qr-maps.png" alt="QR ubicación"><span data-es="Escanea para llegar" data-en="Scan for directions">Escanea para llegar</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <h2 data-es="💬 Contáctanos" data-en="💬 Contact us">💬 Contáctanos</h2>
+  <p class="lede" data-es="Pregunta por nuestras aves disponibles" data-en="Ask about our available birds">Pregunta por nuestras aves disponibles</p>
+  <div class="phone"><a href="tel:+13152899175">(315) 289-9175</a></div>
+  <p style="margin-bottom:8px;"><a href="tel:+13153953680" style="color:#1d7a2f;font-weight:700;text-decoration:none;">(315) 395-3680</a></p>
+  <div class="cta-row">
+    <a class="btn call" href="tel:+13152899175" data-es="📞 Llamar" data-en="📞 Call">📞 Llamar</a>
+    <a class="btn wa" href="https://wa.me/13152899175?text=Hola%20Zuri%20Palomas%20Pet%20Shop" style="background:#35b24a;color:#fff;box-shadow:0 4px 0 #248a36;" data-es="💬 WhatsApp" data-en="💬 WhatsApp">💬 WhatsApp</a>
+  </div>
+  <br>
+  <a class="ig" href="https://instagram.com/zuripalomaspetshop">📸 @zuripalomaspetshop</a>
+</section>
+
+<footer>
+  <a href="tel:+13152899175">Zuri Palomas Pet Shop · (315) 289-9175</a><br>
+  <span data-es="3434 W Columbus Dr Ste 109, Tampa, FL 33607" data-en="3434 W Columbus Dr Ste 109, Tampa, FL 33607">3434 W Columbus Dr Ste 109, Tampa, FL 33607</span>
+</footer>
+
+</div>
+<script>
+function setLang(l){
+  document.documentElement.lang = l;
+  document.querySelectorAll('[data-es]').forEach(function(el){
+    el.textContent = (l === 'es') ? el.getAttribute('data-es') : el.getAttribute('data-en');
+  });
+  document.getElementById('btn-es').classList.toggle('on', l === 'es');
+  document.getElementById('btn-en').classList.toggle('on', l === 'en');
+  try { localStorage.setItem('zuri-lang', l); } catch(e) {}
+}
+(function(){
+  var l = 'es';
+  try { l = localStorage.getItem('zuri-lang') || 'es'; } catch(e) {}
+  setLang(l);
+})();
+</script>
+</body>
+</html>
